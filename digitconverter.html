@@ -9,22 +9,30 @@
                     background-color: #FFF1F1;
                 }
             </style>
+            <script>
+                function ToBinary(base){
+                    num = document.getElementById("number").value;
+                    var num = parseInt(num);
+                    document.getElementById("ans").innerHTML=num.toString(base);
+                    }
+             </script>
     </head>
     
     <body>
-        <div id="header">
-            <h1 align="center"><font size="100" color="black">进制转换器DigitConverter</font></h1>
-        </div>
         <br />
+        <div id="header">
+            <p style="text-align: center;">
+                <img src="images/DigitConverter_logo.png"
+                width="560"
+                height="167">
+            </p>
+        </div>
         <br />
         <div id="function">
-            <p style="text-align: center;"><label style="font-size:20px;" for="Number">Binary to Decimal</label></p>
-            <p style="text-align: center;"><input type="text" id="Number" name="Number" size="30"></p>
+            <p style="text-align: center;"><label style="font-size:30px;" for="number">Decimal to Binary</label></p>
+            <p style="text-align: center;"><input style="width: 200px; height: 30px;" type="text" id="number" name="number" size="30"></p>
+            <p style="text-align: center;"><input style="width: 150px; height: 50px;" type = "button" onclick = "ToBinary(2)" value = "Submit"></p>
+            <p style="text-align: center; font-size: 30px;" id="ans"></p>
         </div>
-        <script>
-            function ToDecimal(num,base){
-                document.getElementById("demo").innerHTML=num.toString(base);
-            }
-        </script>
     </body>
 </html>
