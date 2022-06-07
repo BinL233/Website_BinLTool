@@ -3,14 +3,24 @@
     <head>
         <meta charset="utf-8">
             <title>进制转换器DigitConverter</title>
+
+            <style>
+                body{
+                    background-color: #FFF1F1;
+                }
+            </style>
     </head>
     
     <body>
-        <h1 align="center"><font size="100" color="black">进制转换器DigitConverter</font></h1>
+        <div id="header">
+            <h1 align="center"><font size="100" color="black">进制转换器DigitConverter</font></h1>
+        </div>
         <br />
         <br />
-        <p style="text-align: center;"><label style="font-size:20px;" for="Number">Binary to Decimal</label></p>
-        <p style="text-align: center;"><input type="text" id="Number" name="Number" size="30"></p>
+        <div id="function">
+            <p style="text-align: center;"><label style="font-size:20px;" for="Number">Binary to Decimal</label></p>
+            <p style="text-align: center;"><input type="text" id="Number" name="Number" size="30"></p>
+        </div>
         <script>
             function ToDecimal(num,base){
                 document.getElementById("demo").innerHTML=num.toString(base);
