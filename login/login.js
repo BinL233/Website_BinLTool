@@ -27,7 +27,7 @@ app.post('/login',(req,res,next)=>{
 			}else{
 			if(result[0].password==req.body.pwd){
 			console.log('登录成功！')
-			res.send('<h1>登录成功！</h1><br>'+'欢迎用户：'+result[0].user)
+			res.send('<h1>登录成功！</h1><br>'+'欢迎用户：'+req.body.user)
 			}else if(result[0].password!==req.body.pwd){
 			console.log('密码错误！')
 			console.log(result[0].password)

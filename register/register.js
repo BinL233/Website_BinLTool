@@ -22,7 +22,8 @@ app.post('/register',(req,res,next)=>{
 			return		
 		}else{
 			console.log('注册成功！')
-			res.send('<h1>注册成功！</h1><br>'+'欢迎用户：'+result[0].user)
+			res.send("<head><script>function jump(){location.href='index.html';}</script></head><h1>注册成功！</h1><br>"+'欢迎用户：' + req.body.user
+			+ "<p style='text-align: center;'><input style='width: 100px; height: 30px;' type = 'button' onclick = 'jump()' value = 'Back'></p>")
 			}
 			
 	})
